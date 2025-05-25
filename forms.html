@@ -3,18 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <title>Forms</title>
-  <style>
-    body { font-family: Arial, sans-serif; padding: 2rem; }
-    .chatbot {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 999;
-    }
-  </style>
+  
+<style>
+  body { font-family: Arial, sans-serif; padding: 2rem; background: #fefefe; }
+  h1 { color: #003d99; }
+  .back-btn {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #0057b8;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  .back-btn:hover {
+    background-color: #003d99;
+  }
+  .chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+  }
+</style>
+
 </head>
 <body>
-<h1>Анкета</h1><p>Тут буде форма анкетування...</p>
+<a href="index.html" class="back-btn">← Назад на головну</a>
+<h1>📝 Анкета</h1><p>Форма для оцінки рівня готовності респондентів.</p>
 
 <div class="chatbot">
   <script>
