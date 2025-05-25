@@ -13,29 +13,48 @@
       font-family: Arial, sans-serif;
       background-color: #fff;
       color: #333;
-    }
-    header {
-      background-color: #0057b8;
-      color: #fff;
-      text-align: center;
-      padding: 1rem;
-    }
-    nav {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      min-height: 100vh;
+    }
+    aside {
       background-color: #003d99;
+      width: 220px;
+      padding-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    aside h1 {
+      color: #fff;
+      font-size: 1.2rem;
+      text-align: center;
+      margin: 1rem 0;
+      padding: 0 10px;
     }
     nav a {
       color: white;
       text-decoration: none;
       padding: 1rem;
       display: block;
+      width: 100%;
+      text-align: center;
     }
     nav a:hover {
       background-color: #002b66;
     }
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
     .banner {
+      width: 100%;
+      height: auto;
+      max-height: 400px;
+      object-fit: cover;
+      display: block;
+    }
+    .fallback-banner {
       width: 100%;
       height: auto;
       max-height: 400px;
@@ -60,7 +79,7 @@
       background-color: #eee;
       text-align: center;
       padding: 1rem;
-      margin-top: 2rem;
+      margin-top: auto;
     }
     .chatbot {
       position: fixed;
@@ -68,52 +87,61 @@
       right: 20px;
       z-index: 999;
     }
-    @media (max-width: 600px) {
-      nav {
+    @media (max-width: 768px) {
+      body {
         flex-direction: column;
-        align-items: center;
       }
-      .title-block {
-        font-size: 1.3rem;
+      aside {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      aside h1 {
+        width: 100%;
+        font-size: 1rem;
+      }
+      nav a {
+        padding: 0.5rem 1rem;
       }
     }
   </style>
 </head>
 <body>
-  <header>
+  <aside>
     <h1>Формування готовності до патріотичного виховання</h1>
-  </header>
+    <nav>
+      <a href="index.html">Головна</a>
+      <a href="about.html">Про дослідження</a>
+      <a href="model.html">Модель</a>
+      <a href="forms.html">Анкети</a>
+      <a href="evaluation.html">Оцінювання</a>
+      <a href="publications.html">Публікації</a>
+      <a href="contacts.html">Контакти</a>
+    </nav>
+  </aside>
 
-  <nav>
-    <a href="index.html">Головна</a>
-    <a href="about.html">Про дослідження</a>
-    <a href="model.html">Модель</a>
-    <a href="forms.html">Анкети</a>
-    <a href="evaluation.html">Оцінювання</a>
-    <a href="publications.html">Публікації</a>
-    <a href="contacts.html">Контакти</a>
-  </nav>
+  <main>
+    <video class="banner" autoplay muted loop playsinline poster="images/patriotic_banner.png">
+      <source src="банер.mp4" type="video/mp4">
+      <img src="images/patriotic_banner.png" alt="Патріотичний банер" class="fallback-banner">
+    </video>
 
-  <video class="banner" autoplay muted loop playsinline>
-    <source src="банер.mp4" type="video/mp4">
-    Ваш браузер не підтримує відео.
-  </video>
+    <div class="title-block">
+      Апробація результатів дисертаційного дослідження
+    </div>
 
-  <div class="title-block">
-    Апробація результатів дисертаційного дослідження
-  </div>
+    <div class="qr-block">
+      <h2>Скануй для перегляду сайту</h2>
+      <img src="images/qr_aprobation_site.png" alt="QR-код сайту">
+      <p><a href="https://pavlophd2025.github.io/aprobation-site/">https://pavlophd2025.github.io/aprobation-site/</a></p>
+    </div>
 
-  <div class="qr-block">
-    <h2>Скануй для перегляду сайту</h2>
-    <img src="images/qr_aprobation_site.png" alt="QR-код сайту">
-    <p><a href="https://pavlophd2025.github.io/aprobation-site/">https://pavlophd2025.github.io/aprobation-site/</a></p>
-  </div>
+    <footer>
+      &copy; 2025 Харківська гуманітарно-педагогічна академія. Усі права захищено.
+    </footer>
+  </main>
 
-  <footer>
-    &copy; 2025 Харківська гуманітарно-педагогічна академія. Усі права захищено.
-  </footer>
-
-  <!-- Чат-бот Chatbase з реальним chatbotId -->
   <div class="chatbot">
     <script>
       window.chatbaseConfig = {
