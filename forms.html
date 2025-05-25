@@ -1,70 +1,30 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Анкета</title>
+  <meta charset="UTF-8">
+  <title>Forms</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 1rem;
-      background: #fefefe;
-    }
-    h1 {
-      text-align: center;
-      color: #0057b8;
-    }
-    form {
-      max-width: 600px;
-      margin: auto;
-      background: #fff;
-      padding: 1.5rem;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    label {
-      display: block;
-      margin: 1rem 0 0.5rem;
-    }
-    input, select {
-      width: 100%;
-      padding: 0.5rem;
-      margin-bottom: 1rem;
-    }
-    button {
-      background: #0057b8;
-      color: white;
-      padding: 0.7rem 1.5rem;
-      border: none;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #003d99;
+    body { font-family: Arial, sans-serif; padding: 2rem; }
+    .chatbot {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
     }
   </style>
 </head>
 <body>
-<h1>📋 Анкета для респондентів</h1>
+<h1>Анкета</h1><p>Тут буде форма анкетування...</p>
 
-<form>
-  <label for="name">ПІБ</label>
-  <input type="text" id="name" name="name" required />
+<div class="chatbot">
+  <script>
+    window.chatbaseConfig = {
+      chatbotId: "pfqikf",
+      domain: "www.chatbase.co"
+    };
+  </script>
+  <script src="https://www.chatbase.co/embed.min.js" id="chatbase-script" defer></script>
+</div>
 
-  <label for="age">Вік</label>
-  <input type="number" id="age" name="age" min="16" max="80" required />
-
-  <label for="group">Навчальна група / курс</label>
-  <input type="text" id="group" name="group" />
-
-  <label>Якою мірою ви згодні з твердженням:</label>
-  <select>
-    <option>Повністю згоден</option>
-    <option>Частково згоден</option>
-    <option>Важко відповісти</option>
-    <option>Частково не згоден</option>
-    <option>Повністю не згоден</option>
-  </select>
-
-  <button type="submit">Надіслати</button>
-</form>
 </body>
 </html>
